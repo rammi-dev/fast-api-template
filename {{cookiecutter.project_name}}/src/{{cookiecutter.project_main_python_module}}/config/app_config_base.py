@@ -6,11 +6,14 @@ from functools import lru_cache
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-class ServerAppBaseConf(BaseSettings):
-    root_path: str
-    config_root_path: str
-    log_config_file: str
-    app_endpoint_root_prefix: str
+class ServerAppBaseConf(BaseModel):
+    root_path: str = None
+    config_root_path: str = None
+    log_config_file: str = None
+    app_endpoint_root_prefix: str = None
+    log_level: str = None
+    hostname: str = None
+    port: int = None
 
 class AppConfigBaseEnv(BaseSettings):
     """

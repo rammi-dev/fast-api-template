@@ -15,3 +15,5 @@ logging.config.fileConfig(log_config_path, disable_existing_loggers=False)
 logging.captureWarnings(True)
 
 logging.root.setLevel(env.app_config.log_level)
+
+__version__= "0.0.1"

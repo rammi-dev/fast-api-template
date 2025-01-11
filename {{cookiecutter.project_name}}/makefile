@@ -46,10 +46,9 @@ test:
 
 	python3 -m pytest --cov-report xml:$(CI_PROJECT_DIR)/reports/coverage.xml --cov-report html:$(CI_PROJECT_DIR)/reports/html/ --cov-report json:$(CI_PROJECT_DIR)/reports/coverage.json --cov-config $(CI_PROJECT_DIR)/pyproject.toml
 
-install-lib-register: ## Install git package register
+install-lib-register: ## Install git package register additional
 install-lib-register:
-	pip config set global.extra-index-url https://gitlab.com/api/v4/groups/13299895/-/packages/pypi/simple
-	pip config set global.trusted-host gitlab.com
+
 
 compile-deps: ## Compile dependencies requirements.in -> requirements.txt 
 compile-deps:

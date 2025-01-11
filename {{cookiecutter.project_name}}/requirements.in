@@ -1,7 +1,7 @@
-fastapi~=0.111.1
-pydantic~=2.5.0
-pydantic-settings~=2.2.1
-python-dotenv~=0.21.1
+fastapi~=0.115
+pydantic~=2.5
+pydantic-settings~=2.2
+python-dotenv~=0.21
 pyyaml~=6.0
 starlette_exporter~=0.21
-uvicorn~=0.29.0
+uvicorn~=0.29
