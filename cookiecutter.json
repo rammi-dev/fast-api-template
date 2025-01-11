@@ -1,0 +1,6 @@
+{
+    "project_name": "app",
+    "project_main_python_module": "{{ cookiecutter.project_name|replace('-', '_') }}",
+    "project_description": "default description",
+    "project_group": "Repository group"
+}

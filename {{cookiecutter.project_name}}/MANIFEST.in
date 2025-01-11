@@ -1,0 +1,1 @@
+recursive-include src/{{cookiecutter.project_main_python_module}}/config logging.conf *.yaml *.json

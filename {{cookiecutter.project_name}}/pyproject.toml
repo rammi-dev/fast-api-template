@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mon-metrics-api"
+readme = "README.md"
+description = "Library for metrics store via REST"
+dynamic = ["dependencies", "version", "optional-dependencies"]
+authors = [
+  {name = "Dops", email = "DOps-team@iff.com"},
+]
+maintainers = [
+  {name = "DOps", email = "DOps-team@iff.com"}
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11"
+]
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
+version = {attr = "{{cookiecutter.project_main_python_module}}.__version__"}
+optional-dependencies.dev = {file = ["requirements-dev.txt"] }
+
+[tool.pip-tools.compile]
+dry-run = false
+
+[project.scripts]
+{{cookiecutter.project_name}} = "{{cookiecutter.project_main_python_module}}.__main__:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
+
+[tool.mypy]
+ignore_missing_imports = false
+exclude = '^tests/'
+
+[tool.pytest.ini_options]
+addopts = '--cov={{cookiecutter.project_main_python_module}} --cov-report=term --strict-markers --cov-fail-under=80'
+testpaths = ["tests"]
+
+[tool.ruff]
+# Set the maximum line length to 120.
+line-length = 120
+show-fixes = true
+include = ["pyproject.toml", "src/**/*.py"]
+
+[tool.ruff.lint]
+select = [
+    "F",    # Pyflakes
+    "W",    # pycodestyle
+    "E",    # pycodestyle
+    "I",    # isort
+    "UP",   # pyupgrade
+    "PL",   # Pylint
+    "S",    # Bandit
+    "T201", # Print Statement
+    "T203", # Pretty Print Statement
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.flake8-bandit]
+check-typed-exception = true

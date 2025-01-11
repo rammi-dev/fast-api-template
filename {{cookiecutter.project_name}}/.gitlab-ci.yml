@@ -1,0 +1,17 @@
+include:
+  - project: 'danisco-nutrition-and-biosciences/lighthouse/automation/platform/pipelines'
+    ref: main
+    file: '/pipelines/pipeline-ds-apps-base-template.yaml'
+variables:
+  BRANCH_NAME: main
+  APP_NAME: {{cookiecutter.project_name}}
+
+# python-unit-tests:
+#  image: python:3.11
+
+  # DISABLE_BUILD_PUSH: "true"
+  # DISABLE_BUILD_PUSH_ON_TAG: "false"
+  # DISABLE_PYTHON_UNIT_TEST: "false"
+  # DISABLE_SECURITY_CHECK: "false"
+  # DISABLE_IMAGE_TAG_UPDATE: "false"
+  # DISABLE_TAG_BUMPING: "false"
