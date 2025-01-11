@@ -1,5 +1,4 @@
 fastapi~=0.111.1
-iff-utils~=2.0.1
 pydantic~=2.5.0
 pydantic-settings~=2.2.1
 python-dotenv~=0.21.1

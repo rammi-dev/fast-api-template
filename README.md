@@ -17,19 +17,17 @@ During the execution you will be asked to provide variables
 * project_group - name of the repository group that the application belongs to eg. cedar, rochester, cork etc.
 
 # if you use SSH for git
-cookiecutter git@gitlab.com:danisco-nutrition-and-biosciences/lighthouse/automation/app-api-base-repos-tmpl.git
+cookiecutter git@github.com:rammi-dev/fast-api-template.git
 
 # if you use HTTPS for git
-cookiecutter https://gitlab.com/danisco-nutrition-and-biosciences/lighthouse/automation/app-api-base-repos-tmpl.git
+cookiecutter https://github/rammi-dev/fast-api-template.git.git
 ```
-### Development environment
-Use [Gitlab repository](https://gitlab.com/danisco-nutrition-and-biosciences/lighthouse/automation/gitlab) to create your project fillowing [doc](https://iffprod.atlassian.net/wiki/spaces/KCD/pages/102924326/Managing+GitLab+projects+with+Terraform)
-[Project name](https://gitlab.com/danisco-nutrition-and-biosciences/lighthouse/automation/gitlab/energy-v2/-/blob/main/config.yaml?ref_type=heads#L3) variable will be used for deployment
+
 
 Clone the repository in your local development environemnt
 
 
-cookiecutter -f -o 'path to directory which contains your cloned repo' https://gitlab.com/danisco-nutrition-and-biosciences/lighthouse/automation/app-api-base-repos-tmpl.git 
+cookiecutter -f -o 'path to directory which contains your cloned repo' git@github.com:rammi-dev/fast-api-template.git
 
 During the execution you will be asked to provide variables 
 * project_name - (!!!) should be the same as you provided during the creation of Terraform template 

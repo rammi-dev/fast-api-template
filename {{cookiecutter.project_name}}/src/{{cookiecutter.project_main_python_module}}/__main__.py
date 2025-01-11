@@ -62,7 +62,7 @@ app = FastAPI(
     version="0.0.1",
     contact={
         "name": "Support team name",
-        "email": "support_team_email@iff.com",
+        "email": "rami@mail.com",
     },
     openapi_tags=tags_metadata,
     openapi_url=f"{endpoint_prefix}/openapi.json",

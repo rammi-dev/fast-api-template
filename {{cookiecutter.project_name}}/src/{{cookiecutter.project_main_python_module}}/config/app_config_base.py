@@ -4,9 +4,13 @@ Application should provide environment class with:
 """
 from functools import lru_cache
 
-from iff_utils.config import ServerAppBaseConf
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+class ServerAppBaseConf(BaseSettings):
+    root_path: str
+    config_root_path: str
+    log_config_file: str
+    app_endpoint_root_prefix: str
 
 class AppConfigBaseEnv(BaseSettings):
     """

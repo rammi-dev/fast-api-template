@@ -8,10 +8,10 @@ readme = "README.md"
 description = "Library for metrics store via REST"
 dynamic = ["dependencies", "version", "optional-dependencies"]
 authors = [
-  {name = "Dops", email = "DOps-team@iff.com"},
+  {name = "Dops", email = "rami@mail.com"},
 ]
 maintainers = [
-  {name = "DOps", email = "DOps-team@iff.com"}
+  {name = "DOps", email = "rami@mail.com"}
 ]
 classifiers = [
   "Development Status :: 4 - Beta",

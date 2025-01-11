@@ -39,7 +39,6 @@
 This repository contains template fastApi application. It should be used for a single process use cases. Please modify all files with '-tmpl' postfix. There placeholders inside files (marked wiht double '#') you need to customize. Please make sure that for the production run application should be further adjusted according to your use case. Proper applicatiom name should be of the key element
 
 ## Installation
-For K8s deployment please refer to the https://iffprod.atlassian.net/wiki/spaces/KCD/pages/19365892/New+Apps+Onboarding
 
 ## Usage
 To run the application for development purposes use virtual environment.
@@ -100,7 +99,7 @@ Execute tests:
 Everyone is welcome to introduce improvements. Please, assign one of BO team member for review. We are eager to learn from you.
 
 ## Authors and acknowledgment
-IFF BackOffice team
+Rami
 
 ## License
-IFF
+Rami
