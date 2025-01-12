@@ -24,7 +24,7 @@ install-deps-dev:
 
 clean: ## Remove build and cache files
 clean:
-	rm -rf *.egg-info
+	find . -type d -name "*.egg-info" -exec rm -rf {} +
 	rm -rf build
 	rm -rf dist
 	rm -rf .pytest_cache

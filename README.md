@@ -20,7 +20,7 @@ During the execution you will be asked to provide variables
 cookiecutter git@github.com:rammi-dev/fast-api-template.git
 
 # if you use HTTPS for git
-cookiecutter https://github/rammi-dev/fast-api-template.git.git
+cookiecutter https://github/rammi-dev/fast-api-template.git
 ```
 
 
