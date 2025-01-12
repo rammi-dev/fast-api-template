@@ -33,7 +33,7 @@ During the execution you will be asked to provide variables
 * project_name - (!!!) should be the same as you provided during the creation of Terraform template 
 * project_main_python_module - in most cases can be left default
 * project_description" - description that will be visible in OpenAPI decumentation
-* project_group - name of the repository group that the application belongs to eg. cedar, rochester, cork etc.
+* project_group - name of the repository group that the application belongs to 
 
 Follow the instruction in application README file to start it.
 There are files with suffix 'tmpl'. Before first commit the files should be adjusted to project needs and suffix should be removed
