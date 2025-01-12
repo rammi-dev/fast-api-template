@@ -7,13 +7,16 @@ from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class ServerAppBaseConf(BaseModel):
-    root_path: str = None
-    config_root_path: str = None
-    log_config_file: str = None
-    app_endpoint_root_prefix: str = None
-    log_level: str = None
-    hostname: str = None
-    port: int = None
+    root_path: str
+    config_root_path: str
+    app_endpoint_root_prefix: str
+    log_level: str
+    hostname: str
+    port: int
+    log_config_file: str
+
+
+    
 
 class AppConfigBaseEnv(BaseSettings):
     """
@@ -38,12 +41,14 @@ class AppConfigBaseEnv(BaseSettings):
     """
     model_config = SettingsConfigDict(env_file='.env',
                                       env_file_encoding='utf-8',
-                                      env_nested_delimiter = "__")
+                                      env_nested_delimiter = "__",
+                                  #    extra = 'ignore' 
+                                      )
     def __init__(self) -> None:
         super().__init__()
 
     # Mandatory config inherited by all K8s FASTAPI application
-    app_config: ServerAppBaseConf = ServerAppBaseConf()
+    app_config: ServerAppBaseConf
 
 
 
